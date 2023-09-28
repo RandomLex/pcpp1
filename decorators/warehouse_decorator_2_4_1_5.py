@@ -1,3 +1,6 @@
+WE_LL_PACK_BOOKS = "We'll pack books:"
+
+
 def warehouse_decorator(material):
     def wrapper(our_function):
         def internal_wrapper(*args):
@@ -10,18 +13,17 @@ def warehouse_decorator(material):
 
 @warehouse_decorator('kraft')
 def pack_books(*args):
-    print("We'll pack books:", args)
+    print(WE_LL_PACK_BOOKS, args)
 
 
 @warehouse_decorator('foil')
 def pack_toys(*args):
-    print("We'll pack books:", args)
+    print(WE_LL_PACK_BOOKS, args)
 
 
 @warehouse_decorator('cardboard')
 def pack_fruits(*args):
-    print("We'll pack books:", args)
-
+    print(WE_LL_PACK_BOOKS, args)
 
 
 pack_books('Alice in Wonderland', 'Winnie the Pooh')
